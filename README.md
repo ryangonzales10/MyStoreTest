@@ -1,0 +1,2 @@
+# MyStoreTest
+http://automationpractice.com/
