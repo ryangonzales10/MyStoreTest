@@ -1,1 +1,5 @@
 *.cache
+*.suo
+*.testlog
+MyStoreTestProject/bin/Debug/
+MyStoreTestProject/obj/Debug/

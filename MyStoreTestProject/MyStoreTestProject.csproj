@@ -76,11 +76,10 @@
     <Compile Include="Hooks\Hook.cs" />
     <Compile Include="Page Objects\Page.cs" />
     <Compile Include="Step Definitions\Login_steps.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\Feature1.feature" />
+    <None Include="Features\Login.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
