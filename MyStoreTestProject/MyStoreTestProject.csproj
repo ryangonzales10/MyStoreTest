@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browser.cs" />
     <Compile Include="Hooks\Hook.cs" />
     <Compile Include="Page Objects\Page.cs" />
     <Compile Include="Step Definitions\Login_steps.cs" />
