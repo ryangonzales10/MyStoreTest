@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyStoreTestProject.Page_Objects;
 
 namespace MyStoreTestProject.Step_Definitions
 {
@@ -21,20 +22,21 @@ namespace MyStoreTestProject.Step_Definitions
         [When(@"the user clicks on Sign In Button at the top right")]
         public void WhenTheUserClicksOnSignInButtonAtTheTopRight()
         {
-            Browser.Webdriver.FindElement(By.XPath("//a[@title='Log in to your customer account']")).Click();
+            Page.SignIn1();
         }
 
         [When(@"the User inputs the correct credentials")]
         public void WhenTheUserInputsTheCorrectCredentials()
         {
-            Browser.Webdriver.FindElement(By.Id("email")).SendKeys("archersphoto4@gmail.com");
-            Browser.Webdriver.FindElement(By.Id("passwd")).SendKeys("password01");
+            Page.Username("archersphoto4@gmail.com");
+            Page.Password("password01");
+
         }
 
         [When(@"the User clicks on the green Sign In button")]
         public void WhenTheUserClicksOnTheGreenSignInButton()
         {
-            Browser.Webdriver.FindElement(By.Id("SubmitLogin")).Click();
+            Page.SignIn2();
         }
 
 
