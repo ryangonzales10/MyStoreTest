@@ -1,2 +1,0 @@
-C:\Project\MyStoreTestProject\obj\Debug\MyStoreTestProject.csproj.AssemblyReference.cache
-C:\Project\MyStoreTestProject\obj\Debug\MyStoreTestProject.csproj.CoreCompileInputs.cache

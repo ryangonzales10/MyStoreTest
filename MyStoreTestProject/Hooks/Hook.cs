@@ -9,8 +9,6 @@ namespace MyStoreTestProject.Hooks
     [Binding]
     public sealed class Hook
     {
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
-
         [BeforeScenario]
         public void BeforeScenario()
         {

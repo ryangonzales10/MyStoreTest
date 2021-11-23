@@ -5,6 +5,7 @@ using System.Text;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MyStoreTestProject.Step_Definitions
 {
@@ -42,6 +43,16 @@ namespace MyStoreTestProject.Step_Definitions
         [Then(@"the User should be able to enter their accout")]
         public void ThenTheUserShouldBeAbleToEnterTheirAccout()
         {
+            try
+            {
+                Browser.FindElement(By.Id("my-account")); //goes to catch when element is missing
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw e;
+            }
+
             Browser.Close();
             Browser.Quit();
         }
