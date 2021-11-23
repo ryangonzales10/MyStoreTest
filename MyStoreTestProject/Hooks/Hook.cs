@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace MyStoreTestProject.Hooks
 {
@@ -12,13 +14,16 @@ namespace MyStoreTestProject.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            //TODO: implement logic that has to run before executing each scenario
+            //This runs before any other steps are run
+            ChromeDriver Browser = new ChromeDriver();
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            //TODO: implement logic that has to run after executing each scenario
+            //This runs after all the steps have ran
+            Browser.Webdriver.Close();
+            Browser.Webdriver.Quit();
         }
     }
 }

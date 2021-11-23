@@ -12,31 +12,29 @@ namespace MyStoreTestProject.Step_Definitions
     [Binding]
     public sealed class Login_steps
     {
-        ChromeDriver Browser = new ChromeDriver();
-
         [Given(@"the User navigates to http://automationpractice\.com/")]
         public void GivenTheUserNavigatesToHttpAutomationpractice_Com()
         {
-            Browser.Navigate().GoToUrl("http://automationpractice.com/");
+            Browser.Webdriver.Navigate().GoToUrl("http://automationpractice.com/");
         }
 
         [When(@"the user clicks on Sign In Button at the top right")]
         public void WhenTheUserClicksOnSignInButtonAtTheTopRight()
         {
-            Browser.FindElement(By.XPath("//a[@title='Log in to your customer account']")).Click();
+            Browser.Webdriver.FindElement(By.XPath("//a[@title='Log in to your customer account']")).Click();
         }
 
         [When(@"the User inputs the correct credentials")]
         public void WhenTheUserInputsTheCorrectCredentials()
         {
-            Browser.FindElement(By.Id("email")).SendKeys("archersphoto4@gmail.com");
-            Browser.FindElement(By.Id("passwd")).SendKeys("password01");
+            Browser.Webdriver.FindElement(By.Id("email")).SendKeys("archersphoto4@gmail.com");
+            Browser.Webdriver.FindElement(By.Id("passwd")).SendKeys("password01");
         }
 
         [When(@"the User clicks on the green Sign In button")]
         public void WhenTheUserClicksOnTheGreenSignInButton()
         {
-            Browser.FindElement(By.Id("SubmitLogin")).Click();
+            Browser.Webdriver.FindElement(By.Id("SubmitLogin")).Click();
         }
 
 
@@ -45,16 +43,13 @@ namespace MyStoreTestProject.Step_Definitions
         {
             try
             {
-                Browser.FindElement(By.Id("my-account")); //goes to catch when element is missing
+                Browser.Webdriver.FindElement(By.Id("my-account")); //goes to catch when element is missing
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
                 throw e;
             }
-
-            Browser.Close();
-            Browser.Quit();
         }
 
 
