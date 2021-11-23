@@ -15,7 +15,9 @@ namespace MyStoreTestProject.Hooks
         public void BeforeScenario()
         {
             //This runs before any other steps are run
-            ChromeDriver Browser = new ChromeDriver();
+            Browser.Webdriver = new ChromeDriver();
+            Browser.Webdriver.Manage().Window.Maximize();
+            Browser.Webdriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20); //implicit wait. Will wait before the item appears in page
         }
 
         [AfterScenario]

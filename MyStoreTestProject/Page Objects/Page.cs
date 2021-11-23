@@ -24,6 +24,8 @@ namespace MyStoreTestProject.Page_Objects
         public static void Username(string x) => Browser.Webdriver.FindElement(By.Id(email)).SendKeys(x);
         public static void Password(string x) => Browser.Webdriver.FindElement(By.Id(password)).SendKeys(x);
         public static void SignIn2() => Browser.Webdriver.FindElement(By.Id(singinbuttongreen)).Click();
+        public static void ClearUsername() => Browser.Webdriver.FindElement(By.Id(email)).Clear();
+        public static void ClearPassword() => Browser.Webdriver.FindElement(By.Id(password)).Clear();
 
     }
 }
