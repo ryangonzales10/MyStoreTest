@@ -76,11 +76,13 @@
     <Compile Include="Browser.cs" />
     <Compile Include="Hooks\Hook.cs" />
     <Compile Include="Page Objects\Page.cs" />
+    <Compile Include="Step Definitions\Purchase_steps.cs" />
     <Compile Include="Step Definitions\Login_steps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Login.feature" />
+    <None Include="Features\Purchase.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
