@@ -5,6 +5,7 @@ using System.Text;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyStoreTestProject.Page_Objects;
 
@@ -37,15 +38,16 @@ namespace MyStoreTestProject.Step_Definitions
         {
             try
             {
-                //Test is ALWAYS passing! Need to find a more robust way of checking. GON-012
+                Browser.Webdriver.SwitchTo().Frame(1); //clicking quick view opens a new iframe. This line switches to that frame
                 Browser.Webdriver.FindElement(By.XPath("//h1[text()='Faded Short Sleeve T-shirts']")); //checks description if correct
-                Browser.Webdriver.FindElement(By.Id("//span[@id='our_price_display' and text()='$100']")); //checks price if correct
-                Browser.Webdriver.FindElement(By.XPath("//p[@id='add_to_cart']/descendant::span[text()='Add to sock']")); //checks if Add to Cart is present
+                Browser.Webdriver.FindElement(By.XPath("//span[@id='our_price_display' and text()='$16.51']")); //checks price if correct
+                Browser.Webdriver.FindElement(By.XPath("//p[@id='add_to_cart']/descendant::span[text()='Add to cart']")); //checks if Add to Cart is present
             }
 
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw e;
             }
         }
 
