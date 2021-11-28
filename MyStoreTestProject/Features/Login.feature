@@ -1,4 +1,5 @@
 ﻿Feature: As a User I should be able to log in to the site
+	Test user log in and log out scenarios
 
 Background: User goes to the My Store site 
 	Given the User navigates to http://automationpractice.com/
@@ -15,9 +16,7 @@ Scenario: Log in and Log Out functionality
 
 
 Scenario: Log in with Incorrect Credentials and test other negative scenarios
-
 	When the User clicks on Sign In Button at the top right 
-
 	And the User enters an incorrect User Name and Password
 	And the User clicks on the green Sign In button
 	Then an authentication error should appear 

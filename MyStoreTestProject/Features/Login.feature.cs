@@ -48,7 +48,7 @@ namespace MyStoreTestProject.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "As a User I should be able to log in to the site", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "As a User I should be able to log in to the site", "\tTest user log in and log out scenarios", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -93,9 +93,9 @@ namespace MyStoreTestProject.Features
         
         public virtual void FeatureBackground()
         {
-#line 3
-#line hidden
 #line 4
+#line hidden
+#line 5
  testRunner.Given("the User navigates to http://automationpractice.com/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -108,7 +108,7 @@ namespace MyStoreTestProject.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log in and Log Out functionality", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -128,25 +128,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
+#line 4
 this.FeatureBackground();
 #line hidden
-#line 8
- testRunner.When("the user clicks on Sign In Button at the top right", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 9
- testRunner.And("the User inputs the correct credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("the User clicks on Sign In Button at the top right", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
- testRunner.And("the User clicks on the green Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the User inputs the correct credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
+ testRunner.And("the User clicks on the green Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
  testRunner.Then("the User should be able to enter their account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 13
+#line 14
  testRunner.When("the User clicks logout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 15
  testRunner.Then("the User is signed out and directed back to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -154,14 +154,14 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Log in with Incorrect Credentials and negative scenarios")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Log in with Incorrect Credentials and test other negative scenarios")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "As a User I should be able to log in to the site")]
-        public virtual void LogInWithIncorrectCredentialsAndNegativeScenarios()
+        public virtual void LogInWithIncorrectCredentialsAndTestOtherNegativeScenarios()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log in with Incorrect Credentials and negative scenarios", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 17
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log in with Incorrect Credentials and test other negative scenarios", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -181,31 +181,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
+#line 4
 this.FeatureBackground();
 #line hidden
 #line 19
- testRunner.When("the user clicks on Sign In Button at the top right", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the User clicks on Sign In Button at the top right", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
+#line 20
  testRunner.And("the User enters an incorrect User Name and Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 21
  testRunner.And("the User clicks on the green Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 22
  testRunner.Then("an authentication error should appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 25
+#line 24
  testRunner.When("the User inputs an email with an incorrect format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 26
+#line 25
  testRunner.Then("an Invalid Email Address error should appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 28
+#line 27
  testRunner.When("the User leaves the password blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 29
+#line 28
  testRunner.Then("a Password is Required error should appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
