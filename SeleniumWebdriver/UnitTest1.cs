@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Configuration;
+using SeleniumWebdriver.Configuration;
 
 namespace SeleniumWebdriver
 {
@@ -16,6 +17,8 @@ namespace SeleniumWebdriver
             Console.WriteLine(ConfigurationManager.AppSettings.Get("Browser"));
             Console.WriteLine(ConfigurationManager.AppSettings.Get("Username"));
             Console.WriteLine(ConfigurationManager.AppSettings.Get("Password"));
+            Console.WriteLine($"This is the BrowserType content {BrowserType.Firefox}");
+            Console.WriteLine($"This is the position of BrowserType firefox {(int)BrowserType.Firefox}");
 
         }
     }
