@@ -57,6 +57,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\BrowserType.cs" />
+    <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,10 +70,8 @@
   <ItemGroup>
     <Folder Include="BaseClasses\" />
     <Folder Include="ComponentHelper\" />
-    <Folder Include="Configuration\" />
     <Folder Include="CustomException\" />
     <Folder Include="ExcelReader\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="PageObject\" />
     <Folder Include="Settings\" />
     <Folder Include="TestScript\" />
