@@ -3,3 +3,5 @@
 *.testlog
 MyStoreTestProject/bin/Debug/
 MyStoreTestProject/obj/Debug/
+SeleniumWebdriver/bin/Debug/
+SeleniumWebdriver/obj/Debug/
