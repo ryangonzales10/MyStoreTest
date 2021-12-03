@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SeleniumWebdriver.Configuration;
 
 
 namespace SeleniumWebdriver.Interfaces
@@ -13,6 +14,8 @@ namespace SeleniumWebdriver.Interfaces
     //So, an interface is nothing but a collection of method and property declarations.
     public interface IConfig
     {
-
+        BrowserType GetBrowser(); 
+        string GetUsername();
+        string GetPassword();
     }
 }
