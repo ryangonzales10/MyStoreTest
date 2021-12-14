@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStoreTestProject", "MyStoreTestProject.csproj", "{0D43B57A-EDBC-475A-92E4-27631667AA8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumWebdriver", "..\SeleniumWebdriver\SeleniumWebdriver.csproj", "{6A9CF3EC-EC00-4291-B30F-12DEEDEDDD65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0D43B57A-EDBC-475A-92E4-27631667AA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D43B57A-EDBC-475A-92E4-27631667AA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D43B57A-EDBC-475A-92E4-27631667AA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9CF3EC-EC00-4291-B30F-12DEEDEDDD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9CF3EC-EC00-4291-B30F-12DEEDEDDD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9CF3EC-EC00-4291-B30F-12DEEDEDDD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9CF3EC-EC00-4291-B30F-12DEEDEDDD65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
