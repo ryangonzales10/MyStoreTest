@@ -11,7 +11,7 @@ using SeleniumWebdriver.Configuration;
 using SeleniumWebdriver.CustomException;
 using OpenQA.Selenium.Firefox;
 
-//This takes care of launching the browsers
+//This takes care of launching the browsers, and tearing them down. It's like hook 
 namespace SeleniumWebdriver.BaseClasses
 {
     [TestClass]
@@ -29,8 +29,8 @@ namespace SeleniumWebdriver.BaseClasses
             return driver;
         }
 
-        [AssemblyInitialize]
-        public static void InitWebdriver(TestContext tc) //makes this method run first 
+        [AssemblyInitialize] //makes this method run first 
+        public static void InitWebdriver(TestContext tc) 
         {
             ObjectRepository.Config = new AppConfigReader();
             switch (ObjectRepository.Config.GetBrowser())
@@ -44,6 +44,16 @@ namespace SeleniumWebdriver.BaseClasses
                     break;
                 default:
                     throw new NoSuitableDriverFound($"Driver Not Found {ObjectRepository.Config.GetBrowser().ToString()}");
+            }
+        }
+
+        [AssemblyCleanup] //runs last
+        public static void Teardown()
+        {
+            if (ObjectRepository.Driver != null)
+            {
+                ObjectRepository.Driver.Close();
+                ObjectRepository.Driver.Quit();
             }
         }
     }
