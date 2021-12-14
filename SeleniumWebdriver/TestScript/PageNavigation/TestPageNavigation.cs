@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using SeleniumWebdriver.Settings;
-
-
+using 
+//This is my test
 namespace SeleniumWebdriver.TestScript.PageNavigation
 {
     class TestPageNavigation
@@ -15,9 +15,8 @@ namespace SeleniumWebdriver.TestScript.PageNavigation
         [TestMethod]
         public void OpenPage()
         {
-            //INavigation page = ObjectRepository.Driver.Navigate();
-            //page.GoToUrl(ObjectRepository.Config.GetWebsite());
             ObjectRepository.Driver.Navigate().GoToUrl(ObjectRepository.Config.GetWebsite());
+
 
         }
     }
