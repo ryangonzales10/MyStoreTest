@@ -24,5 +24,10 @@ namespace SeleniumWebdriver.Configuration
         {
             throw new NotImplementedException();
         }
+
+        public string GetWebsite()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
