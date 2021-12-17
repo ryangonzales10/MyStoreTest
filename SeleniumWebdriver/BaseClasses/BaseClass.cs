@@ -14,12 +14,21 @@ using OpenQA.Selenium.Firefox;
 //This takes care of launching the browsers, and tearing them down. It's like hook 
 namespace SeleniumWebdriver.BaseClasses
 {
-    [TestClass]
+    [TestClass] 
     public class BaseClass
     {
+        private static ChromeOptions GetChromeOptions()
+        {
+            ChromeOptions option = new ChromeOptions();
+            option.AddArgument("start-maximized"); //fancy way of saying Browser.Manage().Window.Maximize(); We are passing an argument that does the same thing
+            //option.AddExtension(@"C:\Project\Chrome Extensions"); //inside parenthesis should be the local directory of the extension. to check, go to google/apps in the window of the test
+            return option;
+        }
+
+
         private static IWebDriver GetChromeDriver()
         {
-            IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver(GetChromeOptions());  //this is from line 20, we are passing the maximize argument
             return driver;
         }
 
