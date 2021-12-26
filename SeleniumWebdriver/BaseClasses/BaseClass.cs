@@ -17,6 +17,15 @@ namespace SeleniumWebdriver.BaseClasses
     [TestClass] 
     public class BaseClass
     {
+
+        private static FirefoxProfile GetFirefoxOptions()
+        {
+            FirefoxProfile profile = new FirefoxProfile();
+            FirefoxProfileManager manager = new FirefoxProfileManager();
+            profile = manager.GetProfile("default"); //profile is taken when you run 'firefox -ProfileManager'
+            return profile;
+        }
+
         private static ChromeOptions GetChromeOptions()
         {
             ChromeOptions option = new ChromeOptions();
@@ -34,6 +43,7 @@ namespace SeleniumWebdriver.BaseClasses
 
         private static IWebDriver GetFirefoxDriver()
         {
+            //IWebDriver driver = new FirefoxDriver(GetFirefoxOptions()); //not working anymore
             IWebDriver driver = new FirefoxDriver();
             return driver;
         }
