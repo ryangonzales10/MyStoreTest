@@ -7,16 +7,17 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Chrome;
 using SeleniumWebdriver.Settings;
 using SeleniumWebdriver.ComponentHelper;
+using OpenQA.Selenium.Firefox;
 
 //This is my test
 namespace SeleniumWebdriver.TestScript.PageNavigation
 {
-    class TestPageNavigation
+    public static class TestPageNavigation
     {
         [TestMethod]
-        public void OpenPage()
+        public static void OpenPage()
         {
-            ChromeDriver Browser = new ChromeDriver();
+            FirefoxDriver Browser = new FirefoxDriver();
             //ObjectRepository.Driver.Navigate().GoToUrl(ObjectRepository.Config.GetWebsite());
             NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
             Browser.Close();
