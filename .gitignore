@@ -7,3 +7,6 @@ SeleniumWebdriver/bin/Debug/
 SeleniumWebdriver/obj/Debug/
 MyStoreTestProject/packages/
 MyStoreTestProject/.vs/MyStoreTestProject/v16/TestStore/0/testlog.manifest
+MyStoreTestProject/.vs/slnx.sqlite
+MyStoreTestProject/.vs/VSWorkspaceState.json
+MyStoreTestProject/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
