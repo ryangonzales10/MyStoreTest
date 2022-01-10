@@ -18,10 +18,13 @@ namespace SeleniumWebdriver.TestScript.TextBox
         public void TextBox()
         {
             NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            ObjectRepository.Driver.FindElement(By.XPath("//a[@class='login']")).Click();
-            ObjectRepository.Driver.FindElement(By.Id("email")).SendKeys("rvg_23@yahoo.com");
-            ObjectRepository.Driver.FindElement(By.Id("passwd")).SendKeys("burubugudstoystugudunstuy");
-            ObjectRepository.Driver.FindElement(By.Id("passwd")).Clear();
+            LinkHelper.ClickLink(By.XPath("//a[@class='login']")); //navigate to sign in page
+            TextboxHelper.TypeInTextBox(By.Id("email"), ObjectRepository.Config.GetUsername()); //this is just SendKeys()
+            TextboxHelper.TypeInTextBox(By.Id("passwd"), ObjectRepository.Config.GetPassword()); 
+            TextboxHelper.ClearTextBox(By.Id("passwd")); //this is just Clear()
+            
+
+        
         }
     }
 }
