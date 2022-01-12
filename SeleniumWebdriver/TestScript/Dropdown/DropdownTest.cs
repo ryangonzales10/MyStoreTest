@@ -24,6 +24,10 @@ namespace SeleniumWebdriver.TestScript.Dropdown
             dropdown.SelectByText("Product Name: A to Z"); //this is the visible text
             dropdown.SelectByValue("quantity:desc"); //this is the value tag
 
+            //to check the selected value:
+            Console.WriteLine($"The selected option of the dropdown is {dropdown.SelectedOption.Text}");
+            Assert.AreEqual("In stock", dropdown.SelectedOption.Text);
+
         }
     }
 }
