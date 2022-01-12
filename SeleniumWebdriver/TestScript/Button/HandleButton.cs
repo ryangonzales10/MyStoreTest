@@ -22,7 +22,12 @@ namespace SeleniumWebdriver.TestScript.Button
             TextboxHelper.TypeInTextBox(By.Id("passwd"), ObjectRepository.Config.GetPassword());
 
             Console.WriteLine($"Is the button enabled? {ButtonHelper.IsButtonEnabled(By.Id("SubmitLogin"))}");
+
             Console.WriteLine($"The text inside the button is: {ButtonHelper.GetButtonText(By.XPath("//button[@id='SubmitLogin']/span"))}");
+
+            //this is an alternative to the above line:
+            string x = ObjectRepository.Driver.FindElement(By.XPath("//button[@id='SubmitLogin']/span")).Text; //you cannoy use .Text unless you are putting it on a string variable
+            Console.WriteLine(x);
 
             ButtonHelper.ClickButton(By.Id("SubmitLogin"));
 
