@@ -25,9 +25,23 @@ namespace SeleniumWebdriver.TestScript.Dropdown
             dropdown.SelectByValue("quantity:desc"); //this is the value tag
 
             //to check the selected value:
-            Console.WriteLine($"The selected option of the dropdown is {dropdown.SelectedOption.Text}");
+            Console.WriteLine($"The selected option of the dropdown is {dropdown.SelectedOption.Text}"); //.Text at the end converts it  to a string
             Assert.AreEqual("In stock", dropdown.SelectedOption.Text);
 
+            //to get all the list in the dropdown
+            IList<IWebElement> allOptionsInList = dropdown.Options; //here's a List (IList) with each item as IWebElement
+
+            //this is the basic way:
+            for (int x = 0; x < allOptionsInList.Count; x++)
+            {
+                Console.WriteLine($"Option {x + 1} is: {allOptionsInList[x].Text}");
+            }
+
+            //this is a fancier way
+            foreach (IWebElement x in allOptionsInList)
+            {
+                Console.WriteLine($"Option value: {x.GetAttribute("value")}, text: {x.Text}");
+            }
         }
     }
 }
