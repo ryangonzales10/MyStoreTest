@@ -197,6 +197,7 @@
     <Compile Include="Settings\ObjectRepository.cs" />
     <Compile Include="TestScript\Button\HandleButton.cs" />
     <Compile Include="TestScript\Checkbox\TestCheckBox.cs" />
+    <Compile Include="TestScript\Dropdown\DropdownTest.cs" />
     <Compile Include="TestScript\Hyperlink\TestHyperlink.cs" />
     <Compile Include="TestScript\PageNavigation\TestPageNavigation.cs" />
     <Compile Include="TestScript\TextBox\TestTextBox.cs" />
