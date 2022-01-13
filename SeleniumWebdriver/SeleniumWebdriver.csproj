@@ -90,6 +90,9 @@
       <HintPath>..\MyStoreTestProject\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="Selenium.WebDriver.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MyStoreTestProject\packages\Selenium.WebDriver.Extensions.4.1.0\lib\net47\Selenium.WebDriver.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="StreamJsonRpc, Version=2.8.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\MyStoreTestProject\packages\StreamJsonRpc.2.8.28\lib\netstandard2.0\StreamJsonRpc.dll</HintPath>
     </Reference>
@@ -182,7 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClasses\BaseClass.cs" />
+    <Compile Include="ComponentHelper\ButtonHelper.cs" />
     <Compile Include="ComponentHelper\CheckboxHelper.cs" />
+    <Compile Include="ComponentHelper\DropdownHelper.cs" />
     <Compile Include="ComponentHelper\GenericHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
@@ -194,9 +199,13 @@
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
+    <Compile Include="TestScript\Button\HandleButton.cs" />
     <Compile Include="TestScript\Checkbox\TestCheckBox.cs" />
+    <Compile Include="TestScript\Dropdown\DropdownTest.cs" />
+    <Compile Include="TestScript\FindAllElements\HandleElements.cs" />
     <Compile Include="TestScript\Hyperlink\TestHyperlink.cs" />
     <Compile Include="TestScript\PageNavigation\TestPageNavigation.cs" />
+    <Compile Include="TestScript\Screenshots\TakeScreenshot.cs" />
     <Compile Include="TestScript\TextBox\TestTextBox.cs" />
     <Compile Include="TestScript\WebElement\TestWebElement.cs" />
     <Compile Include="UnitTest1.cs" />
@@ -227,12 +236,12 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\MyStoreTestProject\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\MyStoreTestProject\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\MyStoreTestProject\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MyStoreTestProject\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets'))" />
-    <Error Condition="!Exists('..\MyStoreTestProject\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MyStoreTestProject\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
     <Error Condition="!Exists('..\MyStoreTestProject\packages\Microsoft.VisualStudio.Threading.Analyzers.17.0.63\build\Microsoft.VisualStudio.Threading.Analyzers.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MyStoreTestProject\packages\Microsoft.VisualStudio.Threading.Analyzers.17.0.63\build\Microsoft.VisualStudio.Threading.Analyzers.targets'))" />
     <Error Condition="!Exists('..\MyStoreTestProject\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MyStoreTestProject\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets'))" />
+    <Error Condition="!Exists('..\MyStoreTestProject\packages\Selenium.WebDriver.ChromeDriver.97.0.4692.7100\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MyStoreTestProject\packages\Selenium.WebDriver.ChromeDriver.97.0.4692.7100\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
   <Import Project="..\MyStoreTestProject\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\MyStoreTestProject\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" />
-  <Import Project="..\MyStoreTestProject\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\MyStoreTestProject\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" />
   <Import Project="..\MyStoreTestProject\packages\Microsoft.VisualStudio.Threading.Analyzers.17.0.63\build\Microsoft.VisualStudio.Threading.Analyzers.targets" Condition="Exists('..\MyStoreTestProject\packages\Microsoft.VisualStudio.Threading.Analyzers.17.0.63\build\Microsoft.VisualStudio.Threading.Analyzers.targets')" />
   <Import Project="..\MyStoreTestProject\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets" Condition="Exists('..\MyStoreTestProject\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets')" />
+  <Import Project="..\MyStoreTestProject\packages\Selenium.WebDriver.ChromeDriver.97.0.4692.7100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\MyStoreTestProject\packages\Selenium.WebDriver.ChromeDriver.97.0.4692.7100\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>

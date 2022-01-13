@@ -19,7 +19,7 @@ namespace SeleniumWebdriver.TestScript.Hyperlink
             ObjectRepository.Driver.FindElement(By.LinkText("Forgot your password?")).Click(); //this is the exact hyperlink text
             
             //you can put the above in a variable, but it has to be IWebElement
-            IWebElement element = ObjectRepository.Driver.FindElement(By.LinkText("Forgot your password?"));
+            //IWebElement element = ObjectRepository.Driver.FindElement(By.LinkText("Forgot your password?"));
         }
 
     }

@@ -22,11 +22,11 @@ namespace SeleniumWebdriver.TestScript.WebElement
             {
                 ObjectRepository.Driver.FindElement(By.ClassName("quick-view"));
                 ObjectRepository.Driver.FindElement(By.CssSelector("#header_logo"));
-                ObjectRepository.Driver.FindElement(By.Id("index"));      
-                ObjectRepository.Driver.FindElement(By.LinkText("test")); //should go to catch
-                ObjectRepository.Driver.FindElement(By.PartialLinkText("test")); //should go to catch
-                ObjectRepository.Driver.FindElement(By.Name("test")); //should go to catch
-                ObjectRepository.Driver.FindElement(By.XPath("blank one, should throw an error")); //should go to catch
+                ObjectRepository.Driver.FindElement(By.Id("index"));
+                ObjectRepository.Driver.FindElement(By.LinkText("Women"));
+                ObjectRepository.Driver.FindElement(By.PartialLinkText("Wome")); 
+                ObjectRepository.Driver.FindElement(By.Name("description")); 
+                ObjectRepository.Driver.FindElement(By.XPath("//div[@id='contact-link']"));
             }
             catch (NoSuchElementException e)
             {

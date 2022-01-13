@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Extensions;
 using SeleniumWebdriver.Settings;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,20 @@ namespace SeleniumWebdriver.ComponentHelper
                 return ObjectRepository.Driver.FindElement(Locator);
             else
                 throw new NoSuchElementException($"Element Not Found: {Locator.ToString()}");
+        }
+
+        public static void TakeScreenshot(string filename = "screen") //if user has not supplied a filename, this just defaults as screen. But if they have provided, the provided name will overwrite screen
+        {
+            Screenshot screen = ObjectRepository.Driver.TakeScreenshot(); //need to install Selenium.Webdriver.Extensions Nuget package. Variable Screenshot needs OpenQA.Selenium
+
+            if (filename == "screen")
+            {
+                filename = filename + DateTime.UtcNow.ToString("yyy-MM-dd-mm-ss") + ".jpeg";
+                screen.SaveAsFile(filename, ScreenshotImageFormat.Jpeg); //this will be saved in C:\Project\SeleniumWebdriver\bin\Debug
+                return; //it just stops and returns, so it won't run line 54
+
+            }
+            screen.SaveAsFile(filename, ScreenshotImageFormat.Jpeg); //this will be saved in C:\Project\SeleniumWebdriver\bin\Debug
         }
     }
 }
