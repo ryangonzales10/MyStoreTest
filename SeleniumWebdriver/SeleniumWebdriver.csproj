@@ -202,6 +202,7 @@
     <Compile Include="TestScript\Button\HandleButton.cs" />
     <Compile Include="TestScript\Checkbox\TestCheckBox.cs" />
     <Compile Include="TestScript\Dropdown\DropdownTest.cs" />
+    <Compile Include="TestScript\FindAllElements\HandleElements.cs" />
     <Compile Include="TestScript\Hyperlink\TestHyperlink.cs" />
     <Compile Include="TestScript\PageNavigation\TestPageNavigation.cs" />
     <Compile Include="TestScript\Screenshots\TakeScreenshot.cs" />
