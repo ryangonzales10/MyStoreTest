@@ -16,8 +16,8 @@ namespace SeleniumWebdriver.TestScript.Checkbox
         [TestMethod]
         public void TestBox()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            ObjectRepository.Driver.FindElement(By.XPath("//a[@title='Women']")).Click(); //clicks Women section
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
+            Browser.Driver.FindElement(By.XPath("//a[@title='Women']")).Click(); //clicks Women section
             CheckboxHelper.CheckedCheckbox(By.Id("uniform-layered_category_4"));
             CheckboxHelper.IsCheckboxChecked(By.XPath("//div[@id='uniform-layered_category_4']/span")); //this is showing false!!! 
                  

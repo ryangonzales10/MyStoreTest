@@ -19,9 +19,9 @@ namespace SeleniumWebdriver.TestScript.FindAllElements
         [TestMethod]
         public void GetAllElements()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            ReadOnlyCollection<IWebElement> elements = ObjectRepository.Driver.FindElements(By.XPath("//input"));
-            ReadOnlyCollection<IWebElement> elements2 = ObjectRepository.Driver.FindElements(By.XPath("//hello")); //should return 0
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
+            ReadOnlyCollection<IWebElement> elements = Browser.Driver.FindElements(By.XPath("//input"));
+            ReadOnlyCollection<IWebElement> elements2 = Browser.Driver.FindElements(By.XPath("//hello")); //should return 0
 
             foreach (var x in elements)
             {

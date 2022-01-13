@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 //This will contain objects and properties used by other classes in our framework
 namespace SeleniumWebdriver.Settings
 {
-    public class ObjectRepository
+    public class Browser
     {
         public static IConfig Config {get; set;}
         public static IWebDriver Driver { get; set; }

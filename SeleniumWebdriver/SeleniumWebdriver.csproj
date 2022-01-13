@@ -199,6 +199,7 @@
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
+    <Compile Include="TestScript\BrowserActions\TestBrowserActions.cs" />
     <Compile Include="TestScript\Button\HandleButton.cs" />
     <Compile Include="TestScript\Checkbox\TestCheckBox.cs" />
     <Compile Include="TestScript\Dropdown\DropdownTest.cs" />

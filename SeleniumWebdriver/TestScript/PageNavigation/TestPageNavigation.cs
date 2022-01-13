@@ -18,7 +18,7 @@ namespace SeleniumWebdriver.TestScript.PageNavigation
         public static void OpenPage()
         {
             //var Browser = new FirefoxDriver();
-            ObjectRepository.Driver.Navigate().GoToUrl(ObjectRepository.Config.GetWebsite());
+            Browser.Driver.Navigate().GoToUrl(Browser.Config.GetWebsite());
             //Browser.Navigate().GoToUrl("http://automationpractice.com/");
             //Browser.Close();
             //Browser.Quit();

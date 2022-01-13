@@ -17,7 +17,7 @@ namespace SeleniumWebdriver.TestScript.Screenshots
         [TestMethod]
         public void ScreenShots()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
             GenericHelper.TakeScreenshot("Ryan1.jpeg");
             GenericHelper.TakeScreenshot(); //without filename is handled in helper class
         }

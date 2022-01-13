@@ -24,7 +24,7 @@ namespace SeleniumWebdriver.ComponentHelper
             
             element = GenericHelper.GetElement(Locator);
 
-            //ObjectRepository.Driver.FindElement(Locator).GetAttribute("checked");
+            //Browser.Driver.FindElement(Locator).GetAttribute("checked");
             string flag = element.GetAttribute("class");
             //get the attribute checked and store it in string flag
 
