@@ -17,11 +17,11 @@ namespace SeleniumWebdriver.TestScript.PageNavigation
         [TestMethod]
         public static void OpenPage()
         {
-            FirefoxDriver Browser = new FirefoxDriver();
-            //ObjectRepository.Driver.Navigate().GoToUrl(ObjectRepository.Config.GetWebsite());
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            Browser.Close();
-            Browser.Quit();
+            //var Browser = new FirefoxDriver();
+            ObjectRepository.Driver.Navigate().GoToUrl(ObjectRepository.Config.GetWebsite());
+            //Browser.Navigate().GoToUrl("http://automationpractice.com/");
+            //Browser.Close();
+            //Browser.Quit();
         }
     }
 }
