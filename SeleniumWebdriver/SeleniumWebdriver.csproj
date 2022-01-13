@@ -184,6 +184,7 @@
     <Compile Include="BaseClasses\BaseClass.cs" />
     <Compile Include="ComponentHelper\ButtonHelper.cs" />
     <Compile Include="ComponentHelper\CheckboxHelper.cs" />
+    <Compile Include="ComponentHelper\DropdownHelper.cs" />
     <Compile Include="ComponentHelper\GenericHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
