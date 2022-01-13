@@ -16,13 +16,13 @@ namespace SeleniumWebdriver.TestScript.BrowserActions
         [TestMethod]
         public void TestActions()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            ObjectRepository.Driver.FindElement(By.Id("contact-link")).Click();
-            ObjectRepository.Driver.Navigate().Back(); //go back
-            ObjectRepository.Driver.Navigate().Forward(); //go forward
-            ObjectRepository.Driver.Manage().Window.Minimize(); //minimize window
-            ObjectRepository.Driver.Manage().Window.Maximize(); //maximize window
-            ObjectRepository.Driver.Navigate().Refresh(); //refresh window
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
+            Browser.Driver.FindElement(By.Id("contact-link")).Click();
+            Browser.Driver.Navigate().Back(); //go back
+            Browser.Driver.Navigate().Forward(); //go forward
+            Browser.Driver.Manage().Window.Minimize(); //minimize window
+            Browser.Driver.Manage().Window.Maximize(); //maximize window
+            Browser.Driver.Navigate().Refresh(); //refresh window
 
 
 

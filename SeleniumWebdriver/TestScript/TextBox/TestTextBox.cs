@@ -17,10 +17,10 @@ namespace SeleniumWebdriver.TestScript.TextBox
         [TestMethod]
         public void TextBox()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
             LinkHelper.ClickLink(By.XPath("//a[@class='login']")); //navigate to sign in page
-            TextboxHelper.TypeInTextBox(By.Id("email"), ObjectRepository.Config.GetUsername()); //this is just SendKeys()
-            TextboxHelper.TypeInTextBox(By.Id("passwd"), ObjectRepository.Config.GetPassword()); 
+            TextboxHelper.TypeInTextBox(By.Id("email"), Browser.Config.GetUsername()); //this is just SendKeys()
+            TextboxHelper.TypeInTextBox(By.Id("passwd"), Browser.Config.GetPassword()); 
             TextboxHelper.ClearTextBox(By.Id("passwd")); //this is just Clear()
             
 

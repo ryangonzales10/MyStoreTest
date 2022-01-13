@@ -13,12 +13,12 @@ namespace SeleniumWebdriver.ComponentHelper
     {
         public static void TypeInTextBox(By Locator, string x)
         {
-            ObjectRepository.Driver.FindElement(Locator).SendKeys(x);
+            Browser.Driver.FindElement(Locator).SendKeys(x);
         }
 
         public static void ClearTextBox(By Locator)
         {
-            ObjectRepository.Driver.FindElement(Locator).Clear();
+            Browser.Driver.FindElement(Locator).Clear();
         }
 
     }

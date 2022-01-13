@@ -12,7 +12,7 @@ namespace SeleniumWebdriver.ComponentHelper
     {
         public static void NavigateToUrl(string Url)
         {
-            ObjectRepository.Driver.Navigate().GoToUrl(Url);
+            Browser.Driver.Navigate().GoToUrl(Url);
         }
     }
 }

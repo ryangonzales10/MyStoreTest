@@ -12,14 +12,14 @@ namespace SeleniumWebdriver.TestScript.Hyperlink
         [TestMethod]
         public void ClickLink()
         {
-            Actions action = new Actions(ObjectRepository.Driver);
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            ObjectRepository.Driver.FindElement(By.XPath("//a[@class='login']")).Click();
+            Actions action = new Actions(Browser.Driver);
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
+            Browser.Driver.FindElement(By.XPath("//a[@class='login']")).Click();
             
-            ObjectRepository.Driver.FindElement(By.LinkText("Forgot your password?")).Click(); //this is the exact hyperlink text
+            Browser.Driver.FindElement(By.LinkText("Forgot your password?")).Click(); //this is the exact hyperlink text
             
             //you can put the above in a variable, but it has to be IWebElement
-            //IWebElement element = ObjectRepository.Driver.FindElement(By.LinkText("Forgot your password?"));
+            //IWebElement element = Browser.Driver.FindElement(By.LinkText("Forgot your password?"));
         }
 
     }

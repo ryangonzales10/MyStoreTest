@@ -12,7 +12,7 @@ namespace SeleniumWebdriver.ComponentHelper
     {
         public static void ClickButton(By Locator)
         {
-            ObjectRepository.Driver.FindElement(Locator).Click();
+            Browser.Driver.FindElement(Locator).Click();
         }
 
         public static bool IsButtonEnabled(By Locator)

@@ -52,28 +52,28 @@ namespace SeleniumWebdriver.BaseClasses
         [AssemblyInitialize] //makes this method run first 
         public static void InitWebdriver(TestContext tc) 
         {
-            ObjectRepository.Config = new AppConfigReader();
-            switch (ObjectRepository.Config.GetBrowser())
+            Browser.Config = new AppConfigReader();
+            switch (Browser.Config.GetBrowser())
             {
                 case BrowserType.Chrome:
-                    ObjectRepository.Driver = GetChromeDriver();
+                    Browser.Driver = GetChromeDriver();
                     break;
 
                 case BrowserType.Firefox:
-                    ObjectRepository.Driver = GetFirefoxDriver();
+                    Browser.Driver = GetFirefoxDriver();
                     break;
                 default:
-                    throw new NoSuitableDriverFound($"Driver Not Found {ObjectRepository.Config.GetBrowser().ToString()}");
+                    throw new NoSuitableDriverFound($"Driver Not Found {Browser.Config.GetBrowser().ToString()}");
             }
         }
 
         [AssemblyCleanup] //runs last
         public static void Teardown()
         {
-            if (ObjectRepository.Driver != null)
+            if (Browser.Driver != null)
             {
-                ObjectRepository.Driver.Close();
-                ObjectRepository.Driver.Quit();
+                Browser.Driver.Close();
+                Browser.Driver.Quit();
             }
         }
     }

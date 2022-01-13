@@ -20,13 +20,13 @@ namespace SeleniumWebdriver.TestScript.WebElement
             //this is how to test if an elemt is preseent:
             try
             {
-                ObjectRepository.Driver.FindElement(By.ClassName("quick-view"));
-                ObjectRepository.Driver.FindElement(By.CssSelector("#header_logo"));
-                ObjectRepository.Driver.FindElement(By.Id("index"));
-                ObjectRepository.Driver.FindElement(By.LinkText("Women"));
-                ObjectRepository.Driver.FindElement(By.PartialLinkText("Wome")); 
-                ObjectRepository.Driver.FindElement(By.Name("description")); 
-                ObjectRepository.Driver.FindElement(By.XPath("//div[@id='contact-link']"));
+                Browser.Driver.FindElement(By.ClassName("quick-view"));
+                Browser.Driver.FindElement(By.CssSelector("#header_logo"));
+                Browser.Driver.FindElement(By.Id("index"));
+                Browser.Driver.FindElement(By.LinkText("Women"));
+                Browser.Driver.FindElement(By.PartialLinkText("Wome")); 
+                Browser.Driver.FindElement(By.Name("description")); 
+                Browser.Driver.FindElement(By.XPath("//div[@id='contact-link']"));
             }
             catch (NoSuchElementException e)
             {

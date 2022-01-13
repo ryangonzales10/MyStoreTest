@@ -17,10 +17,10 @@ namespace SeleniumWebdriver.TestScript.Dropdown
         [TestMethod]
         public void TestList()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-            ObjectRepository.Driver.FindElement(By.LinkText("Women")).Click();
+            NavigationHelper.NavigateToUrl(Browser.Config.GetWebsite());
+            Browser.Driver.FindElement(By.LinkText("Women")).Click();
 
-            SelectElement dropdown = new SelectElement(ObjectRepository.Driver.FindElement(By.Id("selectProductSort")));
+            SelectElement dropdown = new SelectElement(Browser.Driver.FindElement(By.Id("selectProductSort")));
 
             dropdown.SelectByIndex(1); //selects second item on the list. or...
             DropdownHelper.DropdownSelectByIndex(By.Id("selectProductSort"), 1);
