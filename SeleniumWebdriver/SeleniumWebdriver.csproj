@@ -90,6 +90,9 @@
       <HintPath>..\MyStoreTestProject\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="Selenium.WebDriver.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MyStoreTestProject\packages\Selenium.WebDriver.Extensions.4.1.0\lib\net47\Selenium.WebDriver.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="StreamJsonRpc, Version=2.8.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\MyStoreTestProject\packages\StreamJsonRpc.2.8.28\lib\netstandard2.0\StreamJsonRpc.dll</HintPath>
     </Reference>
@@ -201,6 +204,7 @@
     <Compile Include="TestScript\Dropdown\DropdownTest.cs" />
     <Compile Include="TestScript\Hyperlink\TestHyperlink.cs" />
     <Compile Include="TestScript\PageNavigation\TestPageNavigation.cs" />
+    <Compile Include="TestScript\Screenshots\TakeScreenshot.cs" />
     <Compile Include="TestScript\TextBox\TestTextBox.cs" />
     <Compile Include="TestScript\WebElement\TestWebElement.cs" />
     <Compile Include="UnitTest1.cs" />
