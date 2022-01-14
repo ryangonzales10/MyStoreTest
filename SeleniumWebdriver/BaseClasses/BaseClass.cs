@@ -29,7 +29,7 @@ namespace SeleniumWebdriver.BaseClasses
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArgument("start-maximized"); //fancy way of saying Browser.Manage().Window.Maximize(); We are passing an argument that does the same thing
-            option.AddArgument("headless");
+            //option.AddArgument("headless");
             //option.AddExtension(@"C:\Project\Chrome Extensions"); //inside parenthesis should be the local directory of the extension. to check, go to google/apps in the window of the test
             return option;
         }
@@ -69,6 +69,7 @@ namespace SeleniumWebdriver.BaseClasses
             Browser.Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Browser.Config.GetPageLoadTimeout()); //implicit wait, will wait for 10 seconds before it throws an error
 
             //ImplicitWait - For controlling the web element load time
+            Browser.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Browser.Config.GetElementLoadTimeout());
         }
 
         [AssemblyCleanup] //runs last

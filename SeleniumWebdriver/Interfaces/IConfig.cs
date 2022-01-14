@@ -19,5 +19,6 @@ namespace SeleniumWebdriver.Interfaces
         string GetPassword();
         string GetWebsite();
         int GetPageLoadTimeout();
+        int GetElementLoadTimeout();
     }
 }
