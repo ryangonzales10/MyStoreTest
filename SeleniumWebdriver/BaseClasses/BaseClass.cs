@@ -17,7 +17,6 @@ namespace SeleniumWebdriver.BaseClasses
     [TestClass] 
     public class BaseClass
     {
-
         private static FirefoxProfile GetFirefoxOptions()
         {
             FirefoxProfile profile = new FirefoxProfile();
@@ -38,7 +37,7 @@ namespace SeleniumWebdriver.BaseClasses
 
         private static IWebDriver GetChromeDriver()
         {
-            IWebDriver driver = new ChromeDriver(GetChromeOptions());  //this is from line 20, we are passing the maximize argument
+            IWebDriver driver = new ChromeDriver(GetChromeOptions());  //this is from line 31, we are passing the maximize argument
             return driver;
         }
 
@@ -65,6 +64,8 @@ namespace SeleniumWebdriver.BaseClasses
                 default:
                     throw new NoSuitableDriverFound($"Driver Not Found {Browser.Config.GetBrowser().ToString()}");
             }
+            Browser.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20); //implicit wait, will wait for 10 seconds before it throws an error
+            //if page loads before then, execution proceeds 
         }
 
         [AssemblyCleanup] //runs last
