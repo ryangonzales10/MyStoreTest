@@ -17,7 +17,6 @@ namespace SeleniumWebdriver.BaseClasses
     [TestClass] 
     public class BaseClass
     {
-
         private static FirefoxProfile GetFirefoxOptions()
         {
             FirefoxProfile profile = new FirefoxProfile();
@@ -30,7 +29,7 @@ namespace SeleniumWebdriver.BaseClasses
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArgument("start-maximized"); //fancy way of saying Browser.Manage().Window.Maximize(); We are passing an argument that does the same thing
-            option.AddArgument("headless");
+            //option.AddArgument("headless");
             //option.AddExtension(@"C:\Project\Chrome Extensions"); //inside parenthesis should be the local directory of the extension. to check, go to google/apps in the window of the test
             return option;
         }
@@ -38,7 +37,7 @@ namespace SeleniumWebdriver.BaseClasses
 
         private static IWebDriver GetChromeDriver()
         {
-            IWebDriver driver = new ChromeDriver(GetChromeOptions());  //this is from line 20, we are passing the maximize argument
+            IWebDriver driver = new ChromeDriver(GetChromeOptions());  //this is from line 31, we are passing the maximize argument
             return driver;
         }
 
@@ -65,6 +64,12 @@ namespace SeleniumWebdriver.BaseClasses
                 default:
                     throw new NoSuitableDriverFound($"Driver Not Found {Browser.Config.GetBrowser().ToString()}");
             }
+
+            //PageLoad - For controlling the page load time
+            Browser.Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Browser.Config.GetPageLoadTimeout()); //implicit wait, will wait for 10 seconds before it throws an error
+
+            //ImplicitWait - For controlling the web element load time
+            Browser.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Browser.Config.GetElementLoadTimeout());
         }
 
         [AssemblyCleanup] //runs last
