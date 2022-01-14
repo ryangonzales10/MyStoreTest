@@ -7,10 +7,10 @@ using SeleniumWebdriver.Interfaces;
 namespace SeleniumWebdriver
 {
     [TestClass]
-    public class UnitTest1
+    public class MyFirstTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void MyFirstTestMethod()
         {
             //ConfigurationManager is from a DLL we added called System.Configuration
             //It enables me to read a configuration file "App.config" 

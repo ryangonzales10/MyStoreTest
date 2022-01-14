@@ -15,9 +15,14 @@ namespace SeleniumWebdriver.TestScript.WebdriverWait
         [TestMethod]
         public void TestWait()
         {
+            //PageLoad - For controlling the page load time
             Browser.Driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(10);
             Browser.Driver.Navigate().GoToUrl("http://www.facebook.com");
+
+            //ImplicitWait - For controlling the web element load time
+            Browser.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             Browser.Driver.FindElement(By.LinkText("Forgotten password?")).Click();
         }
+
     }
 }

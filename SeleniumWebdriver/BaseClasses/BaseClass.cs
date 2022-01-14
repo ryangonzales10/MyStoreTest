@@ -64,8 +64,11 @@ namespace SeleniumWebdriver.BaseClasses
                 default:
                     throw new NoSuitableDriverFound($"Driver Not Found {Browser.Config.GetBrowser().ToString()}");
             }
-            Browser.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20); //implicit wait, will wait for 10 seconds before it throws an error
-            //if page loads before then, execution proceeds 
+
+            //PageLoad - For controlling the page load time
+            Browser.Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Browser.Config.GetPageLoadTimeout()); //implicit wait, will wait for 10 seconds before it throws an error
+
+            //ImplicitWait - For controlling the web element load time
         }
 
         [AssemblyCleanup] //runs last

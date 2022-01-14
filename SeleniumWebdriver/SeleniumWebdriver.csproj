@@ -208,8 +208,9 @@
     <Compile Include="TestScript\PageNavigation\TestPageNavigation.cs" />
     <Compile Include="TestScript\Screenshots\TakeScreenshot.cs" />
     <Compile Include="TestScript\TextBox\TestTextBox.cs" />
+    <Compile Include="TestScript\WebdriverWait\TestWebdriverWait.cs" />
     <Compile Include="TestScript\WebElement\TestWebElement.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="MyFirstTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
